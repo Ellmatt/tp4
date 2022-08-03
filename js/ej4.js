@@ -8,22 +8,19 @@ class Producto {
     this.codigo = codigo;
     this.nombre = nombre;
     this.precio = precio;
-    this.productos= [];
+    this.productos = [];
   }
-guardarObjetos(Leche, Yerba, Aceite){
-this.productos.push(Leche, Aceite, Yerba);
-}
+  guardarObjetos(Leche, Yerba, Aceite) {
+    this.productos.push(Leche, Aceite, Yerba);
+  }
   imprimirDatos() {
     document.write(`<ul>
     <li>codigo: ${this.codigo}</li>
    <li> Nombre: ${this.nombre}</li>
-    <li>Precio: ${this.precio}</li>
-    
+    <li>Precio: ${this.precio}</li>   
     </ul>`);
   }
 }
-
-
 
 let Leche = new Producto("oo1", "Leche Serenisima", "$100");
 let Yerba = new Producto("oo2", "yerba sin palo", "$200");
