@@ -14,10 +14,10 @@
 
 class Libro {
   constructor(isbn, titulo, autor, Npaginas) {
-    (this.isbn = isbn),
-      (this.titulo = titulo),
-      (this.autor = autor),
-      (this.Npaginas = Npaginas);
+    this.isbn = isbn;
+    this.titulo = titulo;
+    this.autor = autor;
+    this.Npaginas = Npaginas;
   }
   // ISBN
   set modificarIsbn(nuevoIsbn) {
@@ -56,7 +56,6 @@ class Libro {
       `<p>El libro ${this.titulo} con ISBN ${this.isbn} creado por el autor ${this.autor} tiene páginas ${this.Npaginas} </p>`
     );
   }
-  mayorNpaginas() {}
 }
 
 let Blancanieves = new Libro(1, "Blanca Nieves", "Pepito", 100);
@@ -64,3 +63,14 @@ let Quijote = new Libro(2, "Quijote de la mancha", "Don Pepito", 200);
 
 Blancanieves.mostrarLibro();
 Quijote.mostrarLibro();
+
+function mayorpaginas() {
+  if (Blancanieves.Npaginas > Quijote.Npaginas) {
+    document.write(`El libro ${Blancanieves.titulo} tiene mas paginas`);
+  } else {
+    document.write(`El libro ${Quijote.titulo} tiene mas paginas`);
+  }
+  console.log("estoy en la funcion");
+}
+
+mayorpaginas();
